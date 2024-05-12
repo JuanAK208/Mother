@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Día de las Madres</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #47a5e6, #63d0f5);
+        background-size: 400% 400%;
+        animation: gradientBG 10s ease infinite;
+    }
+
+    @keyframes gradientBG {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .container {
+        text-align: center;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff7e5f);
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+        font-size: 3rem;
+        margin-bottom: 20px;
+        margin-top: 250px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .message {
+        color: #444;
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+
+    .collage {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-items: center;
+        margin-top: 20px; /* Espacio entre las fotos y los botones */
+    }
+
+    .collage img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .collage img:last-child {
+        grid-column: 2 / span 1; /* Ocupa dos columnas y comienza en la segunda */
+        grid-row: 2; /* Está en la segunda fila */
+    }
+
+    .button-container {
+        margin-top: 20px;
+    }
+
+    .button {
+        background-color: #ff6b6b;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 0 10px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #e74c3c;
+    }
+
+    .emoji {
+        font-size: 2rem;
+        margin-right: 5px;
+    }
+
+    .mensaje {
+        background-color: #47a5e6;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>¡Feliz Día de las Madres!</h1>
+    <p class="message">Gracias por todo lo que haces. Eres una estrella! 🌟</p>
+    <img class="Sirv" data-src="https://juanak.sirv.com/11zon_cropped%20(4).png" alt="Madre <3">
+    <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+    <div class="collage">
+        <img src="https://juanak.sirv.com/3.png" alt="Juan">
+        <img class="Sirv" data-src="https://juanak.sirv.com/4.png" alt="Paula">
+        <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+        <img class="Sirv" data-src="https://juanak.sirv.com/5.png" alt="Paul">
+        <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+    </div>
+    <div class="button-container">
+        <button class="button" onclick="mostrarMensaje('¡Eres la mejor madre del mundo! 🌹')">Mensaje 1</button>
+        <button class="button" onclick="mostrarMensaje('Gracias por tu amor incondicional ❤️')">Mensaje 2</button>
+        <button class="button" onclick="mostrarMensaje('Eres mi inspiración 🌈')">Mensaje 3</button>
+    </div>
+    <div id="mensajeContainer"></div>
+</div>
+
+<script>
+    function mostrarMensaje(mensaje) {
+        var mensajeContainer = document.getElementById('mensajeContainer');
+        mensajeContainer.innerHTML = '<p class="mensaje" style="animation: fadeIn 1s forwards;">' + mensaje + '</p>';
+    }
+</script>
+</body>
+</html>
